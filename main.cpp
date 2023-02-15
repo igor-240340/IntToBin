@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <map>
 
 const std::string message = "Enter a number (or 'q' for exit) and press Enter.";
@@ -34,8 +34,8 @@ int main()
 
         number = atoi(input.c_str());
 
-        // Если число отрицательное, то представим его в дополнительном коде в разрядной сетке int, то есть в 32 битах.
-        // [number]доп = 2^32 - |number| = (2^32 - 1) - |number| + 1.
+        // Р•СЃР»Рё С‡РёСЃР»Рѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ, С‚Рѕ РїСЂРµРґСЃС‚Р°РІРёРј РµРіРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРј РєРѕРґРµ РІ СЂР°Р·СЂСЏРґРЅРѕР№ СЃРµС‚РєРµ int, С‚Рѕ РµСЃС‚СЊ РІ 32 Р±РёС‚Р°С….
+        // [number]РґРѕРї = 2^32 - |number| = (2^32 - 1) - |number| + 1.
         // UINT_MAX = (2^32 - 1).
         // number < 0 => UINT_MAX + number = UINT_MAX - |number|.
         unsigned int q = number < 0 ? UINT_MAX + number + 1 : number;
