@@ -33,11 +33,11 @@ int main() {
     return 0;
 }
 
+// Отрицательное число будем представлять в дополнительном коде в разрядной сетке int, то есть в 32 битах.
+// [number]доп = 2^32 - |number| = (2^32 - 1) - |number| + 1.
+// UINT_MAX = 2^32 - 1.
+// number < 0 => UINT_MAX + number = UINT_MAX - |number|.
 std::string GetBinaryRepresentation(int number) {
-    // Отрицательное число будем представлять в дополнительном коде в разрядной сетке int, то есть в 32 битах.
-    // [number]доп = 2^32 - |number| = (2^32 - 1) - |number| + 1.
-    // UINT_MAX = 2^32 - 1.
-    // number < 0 => UINT_MAX + number = UINT_MAX - |number|.
     unsigned int q = (number < 0) ? (UINT_MAX + number + 1) : number;
     unsigned char r;
     std::string bin = "";
