@@ -1,9 +1,9 @@
 ﻿#include <iostream>
-#include <map>
+#include <unordered_map>
 
 static const std::string MESSAGE = "Input a number (or 'q' - for exit) and press Enter.";
 
-static const std::map<unsigned char, std::string> hexToBin = {
+static const std::unordered_map<unsigned char, std::string> hexToBin = {
     {0, "0000"}, {1, "0001"},
     {2, "0010"}, {3, "0011"},
     {4, "0100"}, {5, "0101"},
@@ -11,7 +11,7 @@ static const std::map<unsigned char, std::string> hexToBin = {
     {8, "1000"}, {9, "1001"},
     {10, "1010"}, {11, "1011"},
     {12, "1100"}, {13, "1101"},
-    {14, "1110"}, {15, "1111"},
+    {14, "1110"}, {15, "1111"}
 };
 
 static std::string GetBinaryRepresentation(int number);
