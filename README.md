@@ -1,2 +1,2 @@
 # IntToBin
-Prints out binary representation of a signed integer.
+Test assignment on implementation of printing a binary representation of a signed integer.
